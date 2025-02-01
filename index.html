@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blocks test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-family: "Inter", serif;
+        }
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+
+        .banner-exact {
+            box-sizing: border-box;
+            position: relative;
+            padding: 150px 0 20px;
+            width: 100%;
+            min-height: 650px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 48px;
+            background: linear-gradient(150deg, rgba(199,128,136,1) 0%, rgba(206,156,167,1) 50%, rgba(219,138,144,1) 100%);
+        }
+        .banner-exact__top {
+            position: relative;
+            padding: 0 32px;
+            z-index: 2;
+        }
+        .banner-exact__top-content {
+            padding-right: 450px;
+        }
+        .banner-exact__top-content-title {
+            margin: 0;
+            color: #fff;
+            font-size: 40px;
+            line-height: 48px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        .banner-exact__top-content-desc {
+            margin: 0;
+            color: #fff;
+            font-size: 26px;
+            line-height: 30px;
+            margin-bottom: 76px;
+            font-weight: 200;
+            text-transform: uppercase;
+        }
+        .banner-exact__top-content-catalog-btn {
+            display: inline-block;
+            color: #000;
+            padding: 20px 68px;
+            font-size: 26px;
+            line-height: 30px;
+            font-weight: 300;
+            background: #fff;
+            border: none;
+            text-decoration: none;
+            transition: all .3s ease;
+        }
+        .banner-exact__top-content-catalog-btn:hover {
+            background: #d9d9d9;
+        }
+        .banner-exact__bottom {
+            position: relative;
+            padding: 0 32px;
+            z-index: 2;
+        }
+        .banner-exact__bottom-list {
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner-exact__bottom-list-item {
+            box-sizing: border-box;
+            max-width: 280px;
+            width: 23.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 16px 32px;
+            background: #fff;
+            border-radius: 24px;
+            font-weight: 300;
+            text-align: center;
+            font-size: 18px;
+            line-height: 24px;
+            animation: popUp 8s infinite ease-in-out;
+        }
+        .banner-exact__bottom-list-item:nth-child(2) {
+            animation-delay: .2s;
+        }
+        .banner-exact__bottom-list-item:nth-child(3) {
+            animation-delay: .4s;
+        }
+        .banner-exact__bottom-list-item:nth-child(4) {
+            animation-delay: .6s;
+        }
+        .banner-exact__top-content-catalog-mobile {
+            display: none;
+            margin-top: 12px;
+            justify-content: center;
+        }
+        .banner-exact-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 450px;
+            height: 100%;
+            display: flex;
+        }
+        .banner-exact-bg img {
+            width: 100%;
+            object-fit: contain;
+            object-position: right center;
+        }
+        @keyframes popUp {
+            0% { transform: translateY(0); }
+            5% { transform: translateY(-4px); }
+            10% { transform: translateY(0); }
+            100% { transform: translateY(0); }
+        }
+
+        @media (max-width: 1000px) {
+            .banner-exact {
+                min-height: 480px;
+                padding: 72px 0 20px;
+                gap: 24px;
+            }
+            .banner-exact__top {
+                padding: 0 24px;
+            }
+            .banner-exact__top-content-title {
+                font-size: 32px;
+                line-height: 36px;
+                margin-bottom: 4px;
+            }
+            .banner-exact__top-content-desc {
+                font-size: 20px;
+                line-height: 24px;
+                margin-bottom: 60px;
+            }
+            .banner-exact__bottom {
+                padding: 0 24px;
+            }
+            .banner-exact__bottom-list {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px 8px;
+            }
+            .banner-exact__bottom-list-item {
+                max-width: 100%;
+                width: auto;
+                padding: 12px 20px;
+                background: #fff;
+                border-radius: 16px;
+                text-align: center;
+                font-size: 18px;
+                line-height: 24px;
+            }
+            .banner-exact__top-content {
+                padding-right: 320px;
+            }
+            .banner-exact-bg {
+                width: 320px;
+            }
+            .banner-exact__top-content-catalog-btn {
+                font-size: 20px;
+                line-height: 24px;
+                padding: 14px 32px;
+            }
+        }
+        @media (max-width: 800px) {
+            .banner-exact {
+                min-height: 400px;
+            }
+            .banner-exact__bottom-list-item {
+                padding: 8px 12px;
+                border-radius: 12px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+            .banner-exact__top-content {
+                padding-right: 200px;
+            }
+            .banner-exact-bg {
+                width: 100%;
+                height: 320px;
+            }
+            .banner-exact__top-content-row {
+                display: flex;
+                justify-content: center;
+            }
+            .banner-exact__top-content-title {
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 4px;
+            }
+            .banner-exact__top-content-desc {
+                font-size: 18px;
+                line-height: 24px;
+                margin-bottom: 32px;
+            }
+            .banner-exact__top-content-catalog-btn {
+                font-size: 14px;
+                line-height: 16px;
+                padding: 8px 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            .banner-exact__bottom-list {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+            .banner-exact {
+                padding: 24px 0;
+                gap: 0;
+            }
+            .banner-exact__top {
+                padding: 0 12px;
+            }
+            .banner-exact__bottom {
+                padding: 0 12px;
+            }
+            .banner-exact__top-content {
+                padding-right: 0;
+            }
+            .banner-exact__top-content-desc {
+                margin-bottom: 0;
+            }
+            .banner-exact__top-content-catalog-desktop {
+                display: none;
+            }
+            .banner-exact__top-content-catalog-mobile {
+                display: flex;
+            }
+            .banner-exact__bottom-list-item {
+                text-align: left;
+                justify-content: flex-start;
+            }
+            .banner-exact-bg {
+                position: relative;
+                width: 100%;
+                height: auto;
+                max-height: 320px;
+                aspect-ratio: 1/1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <article class="banner-exact">
+            <div class="banner-exact__top">
+                <div class="banner-exact__top-content">
+                    <h2 class="banner-exact__top-content-title">
+                        Доставим цветы в&nbsp;точности как&nbsp;на&nbsp;фото
+                    </h2>
+                    <p class="banner-exact__top-content-desc">
+                        Бесплатная доставка
+                    </p>
+                    <div class="banner-exact__top-content-catalog-desktop">
+                        <a class="btn banner-exact__top-content-catalog-btn" href="#">
+                            В&nbsp;каталог
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-exact-bg">
+                <img src="./img/banner-flowers1.png" alt="Букет">
+            </div>
+            <div class="banner-exact__bottom">
+                <div class="banner-exact__bottom-list">
+                    <div class="banner-exact__bottom-list-item">
+                        Средство для&nbsp;ухода за&nbsp;букетом в&nbsp;подарок
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Доставляем цветы на&nbsp;воде
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Записка с&nbsp;вашим текстом бесплатно
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Скидка&nbsp;10% на&nbsp;самовывоз
+                    </div>
+                </div>
+            </div>
+            <div class="banner-exact__top-content-catalog-mobile">
+                <a class="btn banner-exact__top-content-catalog-btn" href="#">
+                    В&nbsp;каталог
+                </a>
+            </div>
+        </article>
+    </div>
+    <hr>
+    <div class="container">
+        <article class="banner-exact">
+            <div class="banner-exact__top">
+                <div class="banner-exact__top-content">
+                    <h2 class="banner-exact__top-content-title">
+                        Доставим цветы в&nbsp;точности как&nbsp;на&nbsp;фото
+                    </h2>
+                    <p class="banner-exact__top-content-desc">
+                        Бесплатная доставка
+                    </p>
+                    <div class="banner-exact__top-content-catalog-desktop">
+                        <a class="btn banner-exact__top-content-catalog-btn" href="#">
+                            В&nbsp;каталог
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-exact-bg bg-2">
+                <img src="./img/banner-flowers2.png" alt="Букет">
+            </div>
+            <div class="banner-exact__bottom">
+                <div class="banner-exact__bottom-list">
+                    <div class="banner-exact__bottom-list-item">
+                        Средство для&nbsp;ухода за&nbsp;букетом в&nbsp;подарок
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Доставляем цветы на&nbsp;воде
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Записка с&nbsp;вашим текстом бесплатно
+                    </div>
+                    <div class="banner-exact__bottom-list-item">
+                        Скидка&nbsp;10% на&nbsp;самовывоз
+                    </div>
+                </div>
+            </div>
+            <div class="banner-exact__top-content-catalog-mobile">
+                <a class="btn banner-exact__top-content-catalog-btn" href="#">
+                    В&nbsp;каталог
+                </a>
+            </div>
+        </article>
+    </div>
+    <hr>
+    <style>
+        .popup-leaving {
+            margin: 0 auto;
+            max-width: 480px;
+            background: linear-gradient(160deg, rgba(199,128,136,1) 0%, rgba(206,156,167,1) 50%, rgba(219,138,144,1) 100%);
+            padding: 32px 20px;
+            color: #fff;
+            border-radius: 12px;
+        }
+        .popup-leaving__content {
+        }
+        .popup-leaving__content-title {
+            color: #fff;
+            text-align: center;
+            font-size: 32px;
+            line-height: 36px;
+            margin-bottom: 12px;
+        }
+        .popup-leaving__content-text {
+            max-width: 320px;
+            margin: 0 auto;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .popup-leaving__content-form {
+            padding: 20px 0;
+            max-width: 240px;
+            margin: 0 auto;
+        }
+        .popup-leaving__content-form-phone {
+            box-sizing: border-box;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            padding: 12px 24px;
+            border: none;
+            color: #000;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .popup-leaving__content-under {
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .popup-leaving__content-under a {
+            color: inherit;
+        }
+    </style>
+    <div class="container">
+        <article class="popup-leaving">
+            <div class="popup-leaving__content">
+                <h2 class="popup-leaving__content-title">
+                    Не нашли то, что вам нужно?
+                </h2>
+                <div class="popup-leaving__content-text">
+                    Получите бесплатную консультацию менеджера для подбора букета
+                </div>
+                <form class="popup-leaving__content-form">
+                    <input class="popup-leaving__content-form-phone" name="phone" placeholder="+7 999 999 99 99">
+                </form>
+                <div class="popup-leaving__content-under">
+                    Или позвоните по номеру: <nobr><a href="#">+7 (999) 999-99-99</a></nobr>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>
