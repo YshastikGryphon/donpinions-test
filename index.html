@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
+    
+</head>
+<body>
     <style>
         body {
             font-family: Inter, Arial, Helvetica, sans-serif;
@@ -22,13 +25,15 @@
         .banner-exact {
             box-sizing: border-box;
             position: relative;
-            padding: 150px 0 20px;
+            padding: 80px 0 20px;
             width: 100%;
-            min-height: 650px;
+            min-height: 320px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             gap: 48px;
+            background: linear-gradient(150deg, #c78088 0%, #ce9ca7 50%, #db8a90 100%); /* PS */
+            background: linear-gradient(150deg, #E58087 0%, #DB99A7 50%, #E2898A  100%); /* Fig */
             background: linear-gradient(150deg, #E58087  0%, #ce9ca7 50%, #db8a90 100%);
         }
         .banner-exact__top {
@@ -37,7 +42,7 @@
             z-index: 2;
         }
         .banner-exact__top-content {
-            padding-right: 450px;
+            padding-right: 600px;
         }
         .banner-exact__top-content-title {
             margin: 0;
@@ -114,14 +119,14 @@
             position: absolute;
             top: 0;
             right: 0;
-            width: 450px;
+            width: 620px;
             height: 100%;
             display: flex;
         }
         .banner-exact-bg img {
             width: 100%;
             object-fit: contain;
-            object-position: right center;
+            object-position: right top;
         }
         @keyframes popUp {
             0% { transform: translateY(0); }
@@ -130,10 +135,10 @@
             100% { transform: translateY(0); }
         }
 
-        @media (max-width: 1000px) {
+        @media (max-width: 1200px) {
             .banner-exact {
-                min-height: 480px;
-                padding: 72px 0 20px;
+                min-height: 360px;
+                padding: 32px 0 20px;
                 gap: 24px;
             }
             .banner-exact__top {
@@ -168,10 +173,10 @@
                 line-height: 24px;
             }
             .banner-exact__top-content {
-                padding-right: 320px;
+                padding-right: 420px;
             }
             .banner-exact-bg {
-                width: 320px;
+                width: 420px;
             }
             .banner-exact__top-content-catalog-btn {
                 font-size: 20px;
@@ -182,6 +187,7 @@
         @media (max-width: 800px) {
             .banner-exact {
                 min-height: 400px;
+                gap: 0;
             }
             .banner-exact__bottom-list-item {
                 padding: 8px 12px;
@@ -193,8 +199,10 @@
                 padding-right: 200px;
             }
             .banner-exact-bg {
+                position: relative;
                 width: 100%;
-                height: 320px;
+                height: auto;
+                max-height: 320px;
             }
             .banner-exact__top-content-row {
                 display: flex;
@@ -247,17 +255,8 @@
                 text-align: left;
                 justify-content: flex-start;
             }
-            .banner-exact-bg {
-                position: relative;
-                width: 100%;
-                height: auto;
-                max-height: 320px;
-                aspect-ratio: 1/1;
-            }
         }
     </style>
-</head>
-<body>
     <div class="container">
         <article class="banner-exact">
             <div class="banner-exact__top">
@@ -276,7 +275,7 @@
                 </div>
             </div>
             <div class="banner-exact-bg">
-                <img src="./img/banner-flowers1.png" alt="Букет">
+                <img src="./img/banner-flowers3.png" alt="Букет">
             </div>
             <div class="banner-exact__bottom">
                 <div class="banner-exact__bottom-list">
@@ -302,6 +301,30 @@
         </article>
     </div>
     <hr>
+    <div id="last-slide-correct" data-vc-full-width="true" data-vc-full-width-init="true" class="vc_row wpb_row vc_row-fluid vc_custom_1579586176144 vc_column-gap-30 vc_row-o-content-middle vc_row-flex" style="background-color: rgb(247, 247, 247); position: relative; left: -99.6px; box-sizing: border-box; width: 1359px; padding-left: 99.6px; padding-right: 99.4px; display: flex;width: 100%;"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+        <div class="wpb_single_image wpb_content_element vc_align_center">
+            
+            <figure class="wpb_wrapper vc_figure">
+                <div class="vc_single_image-wrapper vc_box_shadow_3d  vc_box_border_grey"><img loading="lazy" decoding="async" width="1030" height="644" src="https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-1030x644.jpg" class="vc_single_image-img attachment-large" alt="" srcset="https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-1030x644.jpg 1030w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-650x406.jpg 650w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-64x40.jpg 64w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-300x188.jpg 300w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-768x480.jpg 768w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200-1536x960.jpg 1536w, https://donpions.ru/wp-content/uploads/2019/12/427920-Kycb_1920x1200.jpg 1920w" sizes="auto, (max-width: 1030px) 100vw, 1030px"></div>
+            </figure>
+        </div>
+    </div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><h2 style="text-align: left" class="vc_custom_heading vc_custom_1583311760853">Наши цветы - это лучший способ сказать о своих чувствах</h2><div class="mkdf-icon-list-holder ">
+        <div class="mkdf-il-icon-holder">
+            <img loading="lazy" decoding="async" width="19" height="18" src="https://donpions.ru/wp-content/uploads/2019/12/h1-custom-icon.png" class="attachment-full size-full" alt="">	</div>
+        <p class="mkdf-il-text">Ручная работа</p>
+    </div><div class="mkdf-icon-list-holder ">
+        <div class="mkdf-il-icon-holder">
+            <img loading="lazy" decoding="async" width="19" height="18" src="https://donpions.ru/wp-content/uploads/2019/12/h1-custom-icon.png" class="attachment-full size-full" alt="">	</div>
+        <p class="mkdf-il-text">Уникальные цветочные композиции</p>
+    </div><div class="mkdf-icon-list-holder ">
+        <div class="mkdf-il-icon-holder">
+            <img loading="lazy" decoding="async" width="19" height="18" src="https://donpions.ru/wp-content/uploads/2019/12/h1-custom-icon.png" class="attachment-full size-full" alt="">	</div>
+        <p class="mkdf-il-text">Только свежие цветы</p>
+    </div><a itemprop="url" href="/shop/" target="_self" style="margin: 30px 0 30px 0" class="mkdf-btn mkdf-btn-large mkdf-btn-outline mkdf-btn-underline">
+        <span class="mkdf-btn-text">Перейти в каталог</span>
+        </a></div></div></div></div>
+    <hr>
+    <!--
     <div class="container">
         <article class="banner-exact">
             <div class="banner-exact__top">
@@ -346,6 +369,7 @@
         </article>
     </div>
     <hr>
+    -->
     <style>
         .popup-leaving {
             margin: 0 auto;
